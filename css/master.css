@@ -73,8 +73,17 @@ img {
     width: 100%;
 }
 
+.subtitle .title::before {
+    content: "";
+    display: block;
+    background: url(../images/birdabstract.svg);
+    max-width: 28%;
+    height: 40px;
+    background-repeat: no-repeat;
+}
+
 .secion-p {
-    padding: 3rem 0;
+    padding: 6rem 0;
 }
 
 .container {
@@ -161,7 +170,6 @@ header nav .links li a {
 }
 
 @media (min-width: 320px) and (max-width: 576px) {
-    header nav {}
     header nav .links {
         position: fixed;
         background: #7750f8;
@@ -351,3 +359,37 @@ header nav .links li a {
 
 
 /* ./skilles */
+
+
+/* Services */
+
+.services-wraper {
+    display: flex;
+    gap: 1rem;
+}
+
+.services-wraper .box {
+    background: var(--secondary-color);
+    padding: 2rem;
+}
+
+.services-wraper .box .services-icon {
+    width: 100px;
+}
+
+.box .services-icon img {
+    max-width: 100%;
+}
+
+.box p {
+    width: 100%;
+}
+
+@media (min-width: 320px) and (max-width: 576px) {
+    .services-wraper {
+        flex-direction: column;
+    }
+}
+
+
+/* ./Services */
