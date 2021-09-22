@@ -275,6 +275,9 @@
         .hero_image {
             width: calc(100% / 2);
         }
+        .hero_image {
+            display: block;
+        }
     }
     /* start hero */
     
