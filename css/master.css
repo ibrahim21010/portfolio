@@ -9,15 +9,15 @@
         --secondary-color: #1d2333;
         --f-family: "Raleway", sans-serif;
         --font-size-200: 1rem;
-        --font-size-300: 1.333rem;
-        --font-size-400: 1.777rem;
-        --font-size-500: 2.369rem;
-        --font-size-600: 3.157rem;
-        --font-size-700: 4.209rem;
+        --font-size-300: 1.25rem;
+        --font-size-400: 1.563rem;
+        --font-size-500: 1.953rem;
+        --font-size-600: 2.441rem;
+        --font-size-700: 3.052rem;
     }
     
     html {
-        font-size: 100%;
+        font-size: 15px;
     }
     
     body {
@@ -162,6 +162,9 @@
     }
     
     @media (min-width: 320px) and (max-width: 576px) {
+        html {
+            font-size: 15px;
+        }
         header nav .links {
             position: fixed;
             background: #7750f8;
@@ -193,17 +196,6 @@
             right: 0;
             visibility: visible;
             opacity: 1;
-        }
-         :root {
-            --primary-color: #7750f8;
-            --secondary-color: #1d2333;
-            --f-family: "Raleway", sans-serif;
-            --font-size-200: 1rem;
-            --font-size-300: 1.333rem;
-            --font-size-400: 1.777rem;
-            --font-size-500: 2.369rem;
-            --font-size-600: 1.5rem;
-            --font-size-700: 2.1rem;
         }
     }
     
@@ -275,17 +267,6 @@
     }
     
     @media (min-width: 768px) {
-         :root {
-            --primary-color: #7750f8;
-            --secondary-color: #1d2333;
-            --f-family: "Raleway", sans-serif;
-            --font-size-200: 1rem;
-            --font-size-300: 1.333rem;
-            --font-size-400: 1.2rem;
-            --font-size-500: 2.169rem;
-            --font-size-600: 1.9rem;
-            --font-size-700: 2.8rem;
-        }
         .hero-wraper {
             justify-content: space-between;
             align-items: center;
@@ -321,6 +302,9 @@
     }
     
     @media (min-width: 768px) {
+        html {
+            font-size: 16px;
+        }
         .about-wraper {
             grid-template-columns: repeat(2, 1fr);
         }
@@ -429,6 +413,9 @@
     }
     
     @media (min-width: 992px) {
+        html {
+            font-size: 18px;
+        }
         .services-wraper {
             grid-template-columns: repeat(3, 1fr);
         }
@@ -504,6 +491,12 @@
         .project-wraper {
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: auto;
+        }
+    }
+    
+    @media (min-width: 1200px) {
+        html {
+            font-size: 20px;
         }
     }
     /* ./latest-work */
