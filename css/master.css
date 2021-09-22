@@ -217,7 +217,7 @@
     }
     
     .hero-wraper {
-        display: flex;
+        display: grid;
     }
     
     .hero_content .title {
@@ -266,14 +266,17 @@
         }
     }
     
-    @media (min-width: 768px) {
-        .hero-wraper {
+    @media (min-width: 720px) {
+        /* .hero-wraper {
             justify-content: space-between;
             align-items: center;
         }
         .hero_content,
         .hero_image {
             width: calc(100% / 2);
+        } */
+        .hero_image {
+            display: none;
         }
     }
     /* start hero */
