@@ -13,7 +13,7 @@
         --font-size-400: 1.563rem;
         --font-size-500: 1.953rem;
         --font-size-600: 2.441rem;
-        --font-size-700: 3.052rem;
+        --font-size-700: 2.8rem;
     }
     
     html {
@@ -217,7 +217,7 @@
     }
     
     .hero-wraper {
-        display: grid;
+        display: flex;
     }
     
     .hero_content .title {
@@ -267,16 +267,13 @@
     }
     
     @media (min-width: 720px) {
-        /* .hero-wraper {
+        .hero-wraper {
             justify-content: space-between;
             align-items: center;
         }
         .hero_content,
         .hero_image {
             width: calc(100% / 2);
-        } */
-        .hero_image {
-            display: none;
         }
     }
     /* start hero */
