@@ -257,7 +257,7 @@ header nav .links li a {
     font-size: 16px;
     font-weight: 300;
     border-radius: 50px;
-    width: 105px;
+    width: 140px;
     text-align: center;
     color: #fff;
 }
@@ -382,10 +382,8 @@ header nav .links li a {
     }
 }
 
-@media (min-width: 768px) {
-    .skills-wraper {
-        grid-template-columns: repeat(2, 1fr);
-    }
+@media (min-width: 720px) {
+    .skills-wraper {}
     .item {
         flex-wrap: nowrap;
         width: calc(100% / 3);
