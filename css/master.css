@@ -72,6 +72,7 @@
     img {
         height: auto;
         max-width: 100%;
+        width: 100%;
     }
     
     .subtitle .title::before {
@@ -217,7 +218,7 @@
     }
     
     .hero-wraper {
-        display: flex;
+        display: grid;
     }
     
     .hero_content .title {
@@ -268,13 +269,10 @@
     
     @media (min-width: 720px) {
         .hero-wraper {
-            justify-content: space-between;
-            align-items: center;
+            grid-template-columns: repeat(2, 1fr);
         }
         .hero_content,
-        .hero_image {
-            width: calc(100% / 2);
-        }
+        .hero_image {}
         .hero_image {
             display: block;
         }
@@ -390,6 +388,7 @@
     
     .services-wraper .box .services-icon {
         width: 100px;
+        height: 150px;
     }
     
     .services-wraper .box .services-icon img {
