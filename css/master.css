@@ -145,8 +145,6 @@ img {
 
 /* Start Header */
 
-header {}
-
 header nav {
     display: flex;
     justify-content: space-between;
@@ -291,8 +289,6 @@ header nav .links li a {
     .hero-wraper {
         grid-template-columns: repeat(2, 1fr);
     }
-    .hero_content,
-    .hero_image {}
     .hero_image {
         display: block;
     }
@@ -322,9 +318,10 @@ header nav .links li a {
     margin-bottom: 1rem;
 }
 
-@media (min-width: 320px) and (max-width: 576px) {
+
+/* @media (min-width: 320px) and (max-width: 576px) {
     .about-wraper {}
-}
+} */
 
 @media (min-width: 768px) {
     html {
@@ -333,8 +330,6 @@ header nav .links li a {
     .about-wraper {
         grid-template-columns: repeat(2, 1fr);
     }
-    .about-img,
-    .about-info {}
 }
 
 
@@ -382,11 +377,9 @@ header nav .links li a {
 }
 
 @media (min-width: 320px) and (max-width: 576px) {
-    .skills-wraper {}
     .skills-icons {
         flex-direction: row;
     }
-    .skills-icons .item {}
 }
 
 @media (min-width: 768px) {
