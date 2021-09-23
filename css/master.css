@@ -98,7 +98,7 @@ img {
   }
   [class^="ti-"], [class*=" ti-"]{
       color: #fff;
-      font-size: 1.5rem;
+      font-size: 1rem;
       transition: background-color 0.2s ease;
       padding: 5px;
       border-radius: 3px;
@@ -147,6 +147,11 @@ h3 {
     max-width: 25ch;
 }
 
+
+span{
+    font-size: 0.7rem;
+    color: #ccc;
+}
 /* Small devices (landscape phones, 576px and up) */
 
 @media (min-width: 576px) {
@@ -223,6 +228,9 @@ header nav .links li a {
 .menu-icon {
     cursor: pointer;
 }
+.menu-icon span{
+    font-size: 30px;
+}
 
 @media (min-width: 320px) and (max-width: 576px) {
     html {
@@ -252,6 +260,12 @@ header nav .links li a {
         visibility: hidden;
         opacity: 0;
         z-index: 99999;
+    }
+
+    span.ti-close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
     }
 
     header nav .links li a {
@@ -678,7 +692,7 @@ margin-bottom: 1rem;
 }
 .phone{
     font-size: .8rem;
-    margin: 1rem 0;
+    margin: .3rem 0 .2rem 0 ;
 }
 .location img{
     height: 400px;
@@ -687,8 +701,8 @@ margin-bottom: 1rem;
 footer .social_media{
     display: flex;
     flex-direction: row;
-    gap: 1rem;
-    margin: 1rem 0;
+    gap: 0.3rem;
+    margin: .3rem 0;
 
 }
 
