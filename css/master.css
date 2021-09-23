@@ -550,7 +550,8 @@ header nav .links li a {
 }
 
 .cta-wrpper {
-    display: flex
+    display: flex;
+    justify-content: center;
 }
 
 .cta h3 {
