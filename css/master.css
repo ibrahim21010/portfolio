@@ -673,6 +673,15 @@ margin-bottom: 1rem;
 .contact-form{
     background-color: var(--secondary-color);
     padding: 1.2rem;
+    height: 30rem;
+}
+.phone{
+    font-size: .8rem;
+    margin: 1rem 0;
+}
+.location img{
+    height: 400px;
+    border-radius: 5px;
 }
 footer .social_media{
     display: flex;
