@@ -285,7 +285,7 @@
         background: url("../images/bottom-header-wave.svg");
         background-repeat: no-repeat;
         background-size: cover;
-        width: 120%;
+        width: 100%;
         min-height: 5rem;
         margin-top: -2px;
     }
