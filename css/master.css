@@ -285,7 +285,7 @@ header nav .links li a {
     }
 }
 
-@media (min-width: 720px) {
+@media (min-width:768px) {
     .hero-wraper {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -383,7 +383,10 @@ header nav .links li a {
 }
 
 @media (min-width: 720px) {
-    .skills-wraper {}
+    .skills-wraper {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
     .item {
         flex-wrap: nowrap;
         width: calc(100% / 3);
