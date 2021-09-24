@@ -1,5 +1,6 @@
 const menuIcon = document.querySelector("#menu-bar");
 const navLinks = document.querySelector(".links");
+const closeMenu = document.querySelector("#closeMenu");
 
 
 
@@ -14,3 +15,6 @@ menuIcon.addEventListener("click", () => {
 
 
 });
+closeMenu.addEventListener('click',()=>{
+    navLinks.classList.remove("show")
+})
