@@ -11,11 +11,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;900&display=swap" rel="stylesheet" />
     <title>I.M - Portfolio</title>
     <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/master.css" />
     <link rel="stylesheet" href="css/themify-icons.css" />
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="css/master.css" />
 </head>
 
 <body>
+    
+<div class="cursor"></div><!--=== END OF cursor ===-->
+
+
+
+
+
    <!-- ----------------------------------------------------------------------- -->
    <!--                                 header                                  -->
    <!-- ----------------------------------------------------------------------- -->
@@ -28,10 +36,11 @@
 
             <ul class="links">
                 <span id="closeMenu" class="ti-close"></span>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li  data-nav="hero">Home</li>
+                <li data-nav="services">Services</li>
+                <li data-nav="about">About</li>
+                <li data-nav="work">Portfolio</li>
+                <li data-nav="contact">Contact</li>
               
             </ul>
            
@@ -48,11 +57,11 @@
 <!-- ----------------------------------------------------------------------- -->
 <!--                              hero Section                               -->
 <!-- ----------------------------------------------------------------------- -->
-<section class="hero secion-p">
+<section class="hero secion-p" id="hero" >
     <div class="container">
         <div class="hero-wraper">
             <div class="hero_content">
-                <h1 class="title">Hey! I'm Ibrahim Mohsen</h1>
+                <h1 class="title ">Hey! I'm Ibrahim Mohsen</h1>
                 <p>
                     is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                     industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
@@ -84,7 +93,7 @@
 <!-- ----------------------------------------------------------------------- -->
 <!--                              About section                              -->
 <!-- ----------------------------------------------------------------------- -->
-<section class="about secion-p">
+<section class="about secion-p " id="about" >
     <div class="container">
         <div class="about-wraper">
             <div class="about-img">
@@ -95,7 +104,7 @@
                 <div class="subtitle">
                     <h2 class="title">Who Am I</h2>
                 </div>
-                <p class="">
+                <p >
                     If you’re starting an online business and creating content, you’re almost certainly going to
                     create either written or video content – or both. The problem is that it can be hard to know
                     whicght foot is going to save you a lot of time.If you’re starting
@@ -112,7 +121,7 @@
 <!-- ----------------------------------------------------------------------- -->
 <!--                              Start Skills                               -->
 <!-- ----------------------------------------------------------------------- -->
-<section class="skilles secion-p">
+<section class="skilles secion-p" id="skilles">
     <div class="container">
         <div class="skills-wraper">
 
@@ -154,7 +163,7 @@
 <!--                             Start Services                              -->
 <!-- ----------------------------------------------------------------------- -->
 
-<section class="services secion-p">
+<section class="services secion-p" id="services" >
     <div class="container">
         <div class="subtitle">
             <h2 class="title">Why Hire Me For Your<span>Next Project</span></h2>
@@ -208,7 +217,7 @@
 <!-- ----------------------------------------------------------------------- -->
 <!--                               Latest Work                               -->
 <!-- ----------------------------------------------------------------------- -->
-<section class="latest-work secion-p">
+<section class="latest-work secion-p" id="work" >
     <div class="container">
         <div class="subtitle">
             <h2 class="title">My Latest <span>Work</span></h2>
@@ -273,7 +282,7 @@
 <section class="cta secion-p">
     <div class="container">
         <div class="cta-wrpper">
-            <h4>you don't Need to Be alone Im Here to help you to create your own website</h4>
+            <h4>you don't Need to Be alone Im Here for help </h4>
             <a href="#" class="btn-cta">Hire me now</a>
         </div>
     </div>
@@ -284,13 +293,11 @@
 <!-- ----------------------------------------------------------------------- -->
 <!--                             Footer Section                              -->
 <!-- ----------------------------------------------------------------------- -->
-<footer class="">
+<footer class="footer" id="contact"   data-nav="contact">
     <div class="container">
         <div class="footer-wrapper ">
             <div class="footer_soical_contact">
-                <div class="site_logo">
-                    <img src="images/I.M_LOGO.svg" alt="logo">
-                </div>
+             
 
             
                 <div class="location">
@@ -305,7 +312,9 @@
 
             </div>
             <div class="contact-form flow ">
-
+                <div class="site_logo">
+                    <img src="images/I.M_LOGO.svg" alt="logo">
+                </div>
                 <form action="#">
                     <h4>Lets Chat. Tell me about your project</h4>
                     <span class="small-text">Let's create something together</span>
@@ -332,7 +341,6 @@
         <p>&copy; 2021 <span>made with <span class="ti-heart"></span> <a href="#">Ibrahim Mohsen</a></span>
     </div>
 </footer><!--=== END OF Footer Section ===-->
-
 
 
 
