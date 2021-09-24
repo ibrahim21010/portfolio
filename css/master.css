@@ -34,6 +34,7 @@ body {
     color: var(--white-color);
     line-height: 1.75;
     font-family: var(--f-family);
+    overflow-x: hidden;
 
 }
 
