@@ -1,13 +1,24 @@
-*,
-html {
+/* -------------------------------------------------------------------------- */
+/*                                  Base style                                 */
+/* -------------------------------------------------------------------------- */
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 :root {
+    /* --------------------------------- Colors --------------------------------- */
     --primary-color: #7750f8;
     --secondary-color: #1d2333;
+    --body-color: #161b28;
+    --white-color: rgb(248, 249, 250);
+    --gray-dark: #777;
+    --gray-light: #ccc;
+
+
+    /* ---------------------------------- fonts --------------------------------- */
     --f-family: "Raleway", sans-serif;
     --font-size-200: 1rem;
     --font-size-300: 1.25rem;
@@ -17,22 +28,14 @@ html {
     --font-size-700: 3.052rem;
 }
 
-html {
-    font-size: 15px;
-}
 
 body {
-    background-color: #161b28;
-    color: #fff;
-    font-family: var(--f-family);
+    background-color: var(--body-color);
+    color: var(--white-color);
     line-height: 1.75;
-    display: flex;
-    flex-direction: column;
+
 }
 
-p {
-    margin-bottom: 1rem;
-}
 
 h1,
 h2,
@@ -131,11 +134,12 @@ img {
 }
 
 .container {
-    /* width: 100%; */
+  
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+  
 }
 
 .flow>*+* {
@@ -180,7 +184,7 @@ h3 {
 }
 
 
-/* // Large devices (desktops, 992px and up) */
+/*  Large devices (desktops, 992px and up) */
 
 @media (min-width: 992px) {
     .container {
@@ -189,7 +193,7 @@ h3 {
 }
 
 
-/* // X-Large devices (large desktops, 1200px and up) */
+/* X-Large devices (large desktops, 1200px and up) */
 
 @media (min-width: 1200px) {
     .container {
@@ -198,7 +202,7 @@ h3 {
 }
 
 
-/* // XX-Large devices (larger desktops, 1400px and up) */
+/*  XX-Large devices (larger desktops, 1400px and up) */
 
 @media (min-width: 1400px) {
     .container {
@@ -207,7 +211,89 @@ h3 {
 }
 
 
-/* Start Header */
+
+
+[class^="ti-"],
+[class*=" ti-"] {
+    color: #fff;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+input,
+textarea {
+    background: #161b28;
+    border: none;
+    display: inline-block;
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    color: #fff;
+    font-size: 14px;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+}
+
+input:focus,
+textarea:focus {
+    border: 1px solid var(--primary-color);
+    outline: none !important;
+}
+
+label {
+    font-size: 0.7rem;
+}
+
+[class^="ti-"]:hover {
+    background-color: var(--primary-color);
+
+}
+
+
+
+.title span {
+    color: var(--primary-color);
+
+}
+
+
+
+
+.container {
+ 
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  
+}
+
+
+
+/**************
+ * CUSTOM VAR *
+ **************/
+ .secion-p {
+    padding: 4rem 0;
+}
+.subtitle .title::before {
+    content: "";
+    display: block;
+    background: url(../images/birdabstract.svg);
+    max-width: 28%;
+    height: 40px;
+    background-repeat: no-repeat;
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                Start header                                */
+/* -------------------------------------------------------------------------- */
 
 header nav {
     display: flex;
@@ -215,6 +301,31 @@ header nav {
     padding: 1rem 0;
     align-items: center;
     position: relative;
+   
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    transition: all 0.10s ease-in-out;
+}
+header.fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to right top, #051937, #041a43, #0d194e, #1b1758, #2c1160);
+    z-index: 99999;
+  
+  
+   
+}
+header.fixed  .links a:hover{
+    
+    text-shadow: 0px 11px 15px #8663fac0;
 }
 
 nav .site_logo {
@@ -241,9 +352,13 @@ header nav .links li a {
 }
 
 .menu-icon span {
-    font-size: 30px;
+    font-size: 24px;
 }
 
+
+/**********************************
+ * MEDIA QUERY FOR MOBILE VERSION *
+ **********************************/
 @media (min-width: 320px) and (max-width: 576px) {
     html {
         font-size: 15px;
@@ -265,9 +380,9 @@ header nav .links li a {
         -ms-border-radius: 3px;
         -o-border-radius: 3px;
         transition: right 0.5s ease-in-out;
-        -webkit-transition: right 0.5s  ease;
-        -moz-transition: right 0.5s  ease;
-        -ms-transition: right 0.5s  ease;
+        -webkit-transition: right 0.5s ease;
+        -moz-transition: right 0.5s ease;
+        -ms-transition: right 0.5s ease;
         -o-transition: right 0.5s ease;
         visibility: hidden;
         opacity: 0;
@@ -291,13 +406,17 @@ header nav .links li a {
         opacity: 1;
         transition: all 0.2s ease;
     }
-   
+
 
     .links.show li:first-of-type {
         margin-top: 2rem;
     }
 }
 
+
+/**********************************
+ * MEDIA QUERY FOR tablet VERSION  and higher*
+ **********************************/
 @media (min-width: 560px) {
     header nav .links li {
         display: inline-block;
@@ -310,16 +429,16 @@ header nav .links li a {
 
 }
 
+/*============================ END OF header section ============================*/
 
-/* ./Start Header */
 
-
-/* start hero */
+/* -------------------------------------------------------------------------- */
+/*                                Hero Section                                */
+/* -------------------------------------------------------------------------- */
 
 .hero {
     background: var(--secondary-color);
-    /* min-height: 100vh; */
-    position: relative;
+    
 }
 
 .hero-wraper {
@@ -367,11 +486,23 @@ header nav .links li a {
     background-color: #593db4;
 }
 
+
+
+/**********************************
+ * MEDIA QUERY FOR MOBILE VERSION *
+ **********************************/
+
 @media (min-width: 320px) and (max-width: 576px) {
     .hero_image {
         display: none;
     }
 }
+
+
+
+/**********************************
+ * MEDIA QUERY FOR Tablet VERSION *
+ **********************************/
 
 @media (min-width:768px) {
     .hero-wraper {
@@ -384,6 +515,12 @@ header nav .links li a {
     }
 }
 
+
+
+/**********************************
+ * MEDIA QUERY FOR laptop and higher VERSION *
+ **********************************/
+
 @media (min-width: 992px) {
     .hero-wraper {
         grid-template-columns: repeat(2, 1fr);
@@ -391,8 +528,11 @@ header nav .links li a {
     }
 }
 
-/* start hero */
 
+
+/* -------------------------------------------------------------------------- */
+/*                            Start abstract shape                            */
+/* -------------------------------------------------------------------------- */
 .hero_shape {
     background: url("../images/bottom-header-wave.svg");
     background-repeat: no-repeat;
@@ -403,7 +543,9 @@ header nav .links li a {
 }
 
 
-/* about */
+/* -------------------------------------------------------------------------- */
+/*                                About section                               */
+/* -------------------------------------------------------------------------- */
 
 .about-wraper {
     display: grid;
@@ -418,9 +560,10 @@ header nav .links li a {
 }
 
 
-/* @media (min-width: 320px) and (max-width: 576px) {
-    .about-wraper {}
-} */
+
+/**********************************
+ * MEDIA QUERY FOR Tablet VERSION *
+ **********************************/
 
 @media (min-width: 768px) {
     html {
@@ -433,6 +576,12 @@ header nav .links li a {
         gap: 15px;
     }
 }
+
+/**********************************
+ * MEDIA QUERY FOR laptop and higher VERSION *
+ **********************************/
+
+
 @media (min-width: 992px) {
 
     .about-wraper {
@@ -441,10 +590,10 @@ header nav .links li a {
     }
 }
 
-/* ./about */
 
-
-/* skilles */
+/* -------------------------------------------------------------------------- */
+/*                            start Skills Section                            */
+/* -------------------------------------------------------------------------- */
 
 .skilles {
     background-color: var(--secondary-color);
@@ -488,13 +637,22 @@ header nav .links li a {
     width: 100%;
 }
 
-@media (min-width: 320px) and (max-width: 576px) {
+
+/**********************************
+ * MEDIA QUERY FOR MOBILE VERSION *
+ **********************************/
+ @media (min-width: 320px) and (max-width: 576px) {
     .skills-icons {
         flex-direction: row;
     }
 }
 
-@media (min-width: 720px) {
+
+/**********************************
+ * MEDIA QUERY FOR Tablet VERSION *
+ **********************************/
+
+ @media (min-width: 720px) {
     .skills-wraper {
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
@@ -510,11 +668,9 @@ header nav .links li a {
     }
 }
 
-
-/* ./skilles */
-
-
-/* Services */
+/* -------------------------------------------------------------------------- */
+/*                               Start Services                               */
+/* -------------------------------------------------------------------------- */
 
 .services-wraper {
     display: grid;
@@ -540,13 +696,21 @@ header nav .links li a {
     width: 100%;
 }
 
-@media (min-width: 320px) and (max-width: 576px) {
+
+
+/**********************************
+ * MEDIA QUERY FOR MOBILE VERSION *
+ **********************************/
+ @media (min-width: 320px) and (max-width: 576px) {
     .services-wraper {
         flex-direction: column;
     }
 }
 
-@media (min-width: 768px) {
+/**********************************
+ * MEDIA QUERY FOR Tablet VERSION *
+ **********************************/
+ @media (min-width: 768px) {
     .services-wraper {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -556,7 +720,10 @@ header nav .links li a {
     }
 }
 
-@media (min-width: 992px) {
+/**********************************
+ * MEDIA QUERY FOR laptop and higher VERSION *
+ **********************************/
+ @media (min-width: 992px) {
     html {
         font-size: 18px;
     }
@@ -570,12 +737,9 @@ header nav .links li a {
     }
 }
 
-
-/* ./Services */
-
-
-/* latest-work */
-
+/* -------------------------------------------------------------------------- */
+/*                              Start Latest Work                             */
+/* -------------------------------------------------------------------------- */
 .project-wraper {
     display: grid;
     gap: 1rem;
@@ -630,36 +794,51 @@ header nav .links li a {
 }
 
 
-/* @media (min-width: 320px) and (max-width: 576px) {
-        .project-wraper {}
-    } */
 
-@media (min-width: 768px) {
+
+
+/**********************************
+ * MEDIA QUERY FOR MOBILE VERSION *
+ **********************************/
+
+
+/**********************************
+ * MEDIA QUERY FOR Tablet VERSION *
+ **********************************/
+
+ @media (min-width: 768px) {
     .project-wraper {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
     }
 }
 
-@media (min-width: 992px) {
+
+
+
+/**********************************
+ * MEDIA QUERY FOR laptop VERSION *
+ **********************************/
+ @media (min-width: 992px) {
     .project-wraper {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
     }
 }
 
-@media (min-width: 1200px) {
+/**********************************
+ * MEDIA QUERY FOR Big Screens VERSION *
+ **********************************/
+ @media (min-width: 1200px) {
     html {
         font-size: 18px;
     }
 }
 
 
-/* ./latest-work */
-
-
-/* Cta */
-
+/* -------------------------------------------------------------------------- */
+/*                                 Cta Section                                */
+/* -------------------------------------------------------------------------- */
 .cta {
     background-color: var(--primary-color);
 
@@ -700,11 +879,15 @@ header nav .links li a {
 }
 
 
-/* ./Cta */
+/**********************************
+ * MEDIA QUERY FOR MOBILE VERSION *
+ **********************************/
 
-@media (min-width: 320px) and (max-width: 576px) {}
 
-@media (min-width: 768px) {
+/**********************************
+ * MEDIA QUERY FOR Tablet VERSION *
+ **********************************/
+ @media (min-width: 768px) {
 
     .btn-cta {
         display: inline-block;
@@ -713,7 +896,9 @@ header nav .links li a {
 }
 
 
-/* footer */
+/* -------------------------------------------------------------------------- */
+/*                               Footer Section                               */
+/* -------------------------------------------------------------------------- */
 footer {
     margin-top: 4rem;
 }
@@ -761,31 +946,7 @@ footer form {
     justify-content: center;
 }
 
-input,
-textarea {
-    background: #161b28;
-    border: none;
-    display: inline-block;
-    width: 100%;
-    padding: 0.5rem;
-    margin: 0.5rem 0;
-    color: #fff;
-    font-size: 14px;
-}
 
-input[type="submit"] {
-    cursor: pointer;
-}
-
-input:focus,
-textarea:focus {
-    border: 1px solid var(--primary-color);
-    outline: none !important;
-}
-
-label {
-    font-size: 0.7rem;
-}
 
 .subFooter {
     background: var(--secondary-color);
@@ -810,9 +971,16 @@ label {
     text-transform: uppercase;
 }
 
-@media (min-width: 320px) and (max-width: 576px) {}
 
-@media (min-width: 768px) {
+/**********************************
+ * MEDIA QUERY FOR MOBILE VERSION *
+ **********************************/
+
+
+/**********************************
+ * MEDIA QUERY FOR Tablet VERSION *
+ **********************************/
+ @media (min-width: 768px) {
     .footer-wrapper {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
@@ -821,4 +989,21 @@ label {
 
 }
 
-/* footer */
+
+
+
+
+
+
+/**********************************
+ * MEDIA QUERY FOR laptop and higher VERSION *
+ **********************************/
+
+
+/**********************************
+ * MEDIA QUERY FOR Big Screens VERSION *
+ **********************************/
+
+
+
+
