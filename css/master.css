@@ -34,10 +34,13 @@ body {
     color: var(--white-color);
     line-height: 1.75;
     font-family: var(--f-family);
-    overflow-x: hidden;
+ 
+
 
 }
-
+.site-wrpper{
+    overflow-x: hidden;
+}
 
 h1,
 h2,
@@ -375,7 +378,7 @@ header nav .links li {
     html {
         font-size: 15px;
     }
-
+        
     header nav .links {
         position: fixed;
         background: #7750f8;
