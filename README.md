@@ -4,6 +4,7 @@ Using
 1- HTML
 2- Css
 3- JS (Without Framework)
+4- using AOS animation for animation Sections Only
 
 ## Some image from Free Pik
 1- <a href='https://www.freepik.com/vectors/man'>Man vector created by upklyak - www.freepik.com</a>
